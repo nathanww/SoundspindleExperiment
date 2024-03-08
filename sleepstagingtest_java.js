@@ -257,7 +257,7 @@ function draw() {
     }
    else if (practiceStage == -1) {
      background(0);
-       text("First we will have you practice scoring about 20 epochs of sleep. You will see each epoch until you get it correct. \nYou should hear sounds associated with each epoch \nPress any key to continue.",x_margin, 520);
+       text("First we will have you practice scoring 20 epochs of sleep. \nEach epoch comes from a different subject.  You will see each epoch until you get it correct. \nYou should hear sounds associated with each epoch \nPress any key to continue.",x_margin, 520);
     }
   if (practiceStage == 0) {
     background(0);
@@ -266,7 +266,7 @@ function draw() {
     text("Welcome to the sleep staging experiment!\nClick anywhere to continue.",x_margin, 50);
     }
     else {
-      instructions="Now we will have you stage some more sleep. \nThis time you will see each epoch only once, so try to get it correct on the first try. \n#SOUND \nClick anywhere to continue.";
+      instructions="Now we will have you stage some more sleep. There are 30 epoichs in this block, and each comes from a different subject. \nThis time you will see each epoch only once, so try to get it correct on the first try. \n#SOUND \nClick anywhere to continue.";
       if (playSound) {
         instructions=instructions.replace("#SOUND", "In this block, we will play also play sounds that represent the EEG signal in O1-A2 (the same as during the practice)");
       }
