@@ -266,7 +266,7 @@ function draw() {
     text("Welcome to the sleep staging experiment!\nClick anywhere to continue.",x_margin, 50);
     }
     else {
-      instructions="Now we will have you stage some more sleep. There are 30 epoichs in this block, and each comes from a different subject. \nThis time you will see each epoch only once, so try to get it correct on the first try. \n#SOUND \nClick anywhere to continue.";
+      instructions="Now we will have you stage some more sleep. There are 30 epochs in this block, and each comes from a different subject. \nThis time you will see each epoch only once, so try to get it correct on the first try. \n#SOUND \nClick anywhere to continue.";
       if (playSound) {
         instructions=instructions.replace("#SOUND", "In this block, we will play also play sounds that represent the EEG signal in O1-A2 (the same as during the practice)");
       }
