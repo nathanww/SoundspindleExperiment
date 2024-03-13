@@ -352,7 +352,7 @@ function draw() {
   }
   else if (practiceStage == 3) {
 	  //compute whether valid responses based on rt
-	 if (median(rts) < 3) {
+	 if (median(rts) < 1) {
 		 rtcrit=false;
 	 }
     window.location.replace("https://mit.co1.qualtrics.com/jfe/form/SV_0pwKV9gTyvvYRT0?data="+results+"&pid="+pid+"&sound="+soundBlock+"&block="+block+"&rts="+median(rts)+"&rtcrit="+rtcrit);
