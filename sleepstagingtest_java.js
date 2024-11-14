@@ -214,12 +214,13 @@ function keyPressed() {
       }
       timeSpent=round((Date.now()-startTime)/1000,2);
       correct=criterionSplit[currentImage].split(",")[3];
+	  fileName=criterionSplit[currentImage].split(",")[0];
       isCorrect=calculateCorrect(userStage, correct);
 	    //@sam this runs once per trial and updates the results for each trial. UserStage is the stage the person said, correct is the correct stange, timeSpent is the number of seconds spent on the trial and totalClicks is the number of backwards or forwards command shtye gave.
-      results=results+","+userStage+":"+correct+":"+timeSpent+":"+totalClicks;
+      results=results+","+fileName+":"+userStage+":"+correct+":"+timeSpent+":"+totalClicks;
 	  rts.push(timeSpent); //log the rt for this trial
       sendDataToSheet(userStage, correct, timeSpent, totalClicks, pid, block, playSound, isCorrect);
-      totalClicks=0;
+      totalClicks=0; 
       
     }  
   }
