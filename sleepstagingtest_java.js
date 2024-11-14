@@ -299,7 +299,13 @@ function draw() {
     if (practiceStage == -2) {
       background(0);
        image(demo,x_margin,0,1100,500,0,0,criterionImages_pre[0].width,1420);
-       text("This is how sleep will be displayed. In this practice, you will also hear the EEG transformed into a sound. \nMake sure your volume is turned up. \nPress any key to continue.",x_margin, 520);
+	   if (playSound) {
+        text("This is how sleep will be displayed. In this practice, you will also hear the EEG transformed into a sound. \nMake sure your volume is turned up. \nPress any key to continue.",x_margin, 520);
+	   }
+	   else {
+		text("This is how sleep will be displayed. \nPress any key to continue.",x_margin, 520);
+
+	   }
     }
    else if (practiceStage == -1) {
      background(0);
