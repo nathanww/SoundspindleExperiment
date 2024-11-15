@@ -109,7 +109,7 @@ criterionSplit.forEach((val) => {
 		sound = loadSound(splitup[0]+".wav");
 	  }
 	  else {
-		  sound = loadSound(splitup[0]+".ogg");
+		  sound = loadSound(splitup[0]+".mp4");
 	  }
       criterionSounds.push(sound);
       criterionImages.push(img1);
@@ -118,7 +118,7 @@ criterionSplit.forEach((val) => {
     }
      try {
       img2=loadImage(splitup[1]+".png");
-      sound = loadSound(splitup[1]+".ogg");
+      sound = loadSound(splitup[1]+".mp4");
       criterionSounds_pre.push(sound);
       criterionImages_pre.push(img2);
       }
@@ -127,7 +127,7 @@ criterionSplit.forEach((val) => {
       }
       try {
       img3=loadImage(splitup[2]+".png");
-      sound = loadSound(splitup[2]+".ogg");
+      sound = loadSound(splitup[2]+".mp4");
       criterionSounds_post.push(sound);
       criterionImages_post.push(img3);
       }
@@ -344,7 +344,7 @@ function draw() {
 
   image(criterionImages_pre[currentImage],600,240,1100,500,0,0,criterionImages_pre[currentImage].width,1420);
   if (change && playSound) {
-    //criterionSounds_pre[currentImage].play(); //turned off for debugging
+    criterionSounds_pre[currentImage].play(); //turned off for debugging
     change=false;
   }
   }
