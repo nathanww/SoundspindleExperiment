@@ -10,6 +10,8 @@ for line in inlines[1:]:
     testpath="data\\outputs_part4\\"+splitup[0]+"\\"+splitup[1]+".wav"
     if os.path.isfile(testpath):
         buffer.append(outline)
+    else:
+        print("not a file!")
     if len(buffer) == 30:
         formatted=""
         for item in buffer:
