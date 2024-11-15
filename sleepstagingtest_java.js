@@ -107,7 +107,12 @@ criterionSplit.forEach((val) => {
       splitup=val.split(",");
       try{
       img1=loadImage(splitup[0]+".png");
-      sound = loadSound(splitup[0]+".wav");
+	  if (block == '0' || block == '1' || block == '2') {
+		sound = loadSound(splitup[0]+".wav");
+	  }
+	  else {
+		  sound = loadSound(splitup[0]+".ogg");
+	  }
       criterionSounds.push(sound);
       criterionImages.push(img1);
       } catch (exceptionVar) {
