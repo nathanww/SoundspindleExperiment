@@ -6,12 +6,12 @@ buffer=[]
 for line in inlines[1:]:
     splitup=line.split(",")
     outline="./data/outputs_part4/"+splitup[0]+"/"+splitup[1]+","+"./data/outputs_part4/"+splitup[0]+"/"+str(int(splitup[1])-30)+","+"./data/outputs_part4/"+splitup[0]+"/"+str(int(splitup[1])+30)+","+splitup[2]
-
+    testpath2="data\\outputs_part4\\"+splitup[0]+"\\"+str(int(splitup[1])-30)+".wav"
+    testpath3="data\\outputs_part4\\"+splitup[0]+"\\"+str(int(splitup[1])+30)+".wav"
     testpath="data\\outputs_part4\\"+splitup[0]+"\\"+splitup[1]+".wav"
-    if os.path.isfile(testpath):
+    if os.path.isfile(testpath) and os.path.isfile(testpath2) and os.path.isfile(testpath3):
         buffer.append(outline)
-    else:
-        print("not a file!")
+   
     if len(buffer) == 30:
         formatted=""
         for item in buffer:
