@@ -92,7 +92,7 @@ function preload() {
     console.log("Loading block6");
   }
     if (block=='7') {
-    criterion=block2;
+    criterion=block7;
     dropout=false;
     console.log("Loading block7");
 	playSound=false; //sound is always off in block7
